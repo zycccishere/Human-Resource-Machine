@@ -1,0 +1,9 @@
+3
+Equilibrium
+For each two numbers X and Y in the input sequence, if X is equal to Y, output one of X and Y. Else, do nothing.
+8 6 2 7 7 -9 3 -3 -3
+2 7 -3
+3 114514 114514 114514
+8 0 1 5 4 2 3 6 7
+
+9 28

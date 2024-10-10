@@ -1,0 +1,28 @@
+由于txt不受限于编码问题，因此这里直接采用中文。（
+
+
+自定义关卡功能的使用仍然从Launcher出发，选择自定义游戏后会提示用户选择新建关卡、删除关卡或游玩关卡，这里主要对新建关卡部分做教程。
+
+选择新建关卡后，程序会提示输入一个关卡配置文件以导入新关卡，这里我们用一个实例来说明关卡配置文件的要求：
+例如在"C:\Users\m1861\Desktop\example.txt"中，用户可以写入以下数据：
+
+My New Level
+For each number in sequence, output it if it is not 0.
+6 1 2 3 4 0 5
+5 1 2 3 4 5
+2 blank 1
+4 inbox outbox jumpifzero jump
+-1 -1
+
+没错，这正是customize_level文件夹中"My New Level.dat"中关卡的用户输入版本。
+第1行是一整行字符串，可以包含空格（但不建议太长），是自定义新关卡的关卡名
+第2行是关卡要求（描述），主要交代题目要求。
+第3行以一个数innum开始，紧跟着innum个数（空格分隔），代表输入数据
+第4行以一个数outnum开始，紧跟着outnum个数（空格分隔），代表输出数据
+第5行以一个数spacenum开始，紧跟着spacenum个数（空格分隔），代表有spacenum个空地以及其初始状态（blank代表没有数，否则一个数代表初始已有的数）
+第6行以一个数cmdnum开始，紧跟着cmdnum个字符串（空格分隔），代表指令集有cmdnum条指令，每个字符串分别为指令全集
+			{"inbox", "outbox", "add", "sub", "copyto", "copyfrom", "jump", "jumpifzero"}
+中的一个元素
+最后一行是两个整数，分别代表本关的行数限制以及运算次数限制，输入-1代表没有对应的这种限制。
+
+由此，创建好配置文件后可通过客户端将其导入，进而进行自定义游戏。

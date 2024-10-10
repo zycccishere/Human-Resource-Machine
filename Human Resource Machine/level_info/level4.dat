@@ -1,0 +1,9 @@
+4
+8x Intensifier
+For each number X in the input sequence, output 8X.
+10 1 -2 3 6 9 10 -11 -12 5 8
+10 8 -16 24 48 72 80 -88 -96 40 64
+1 114514
+6 0 1 5 4 2 6
+
+9 90

@@ -1,0 +1,8 @@
+-1
+My New Level
+For each number in sequence, output it if it is not 0.
+6 1 2 3 4 0 5 
+5 1 2 3 4 5 
+2 114514 1 
+4 0 1 7 6 
+-1 -1
